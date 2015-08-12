@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/txtGanador"
+            android:layout_row="4"
+            android:layout_column="1" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn00"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:onClick="btn00" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn01"
+            android:layout_row="8"
+            android:layout_column="1"
+            android:onClick="btn01" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn02"
+            android:layout_row="8"
+            android:layout_column="2"
+            android:onClick="btn02" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="New ImageButton"
+            android:id="@+id/btn10"
+            android:layout_row="9"
+            android:layout_column="0"
+            android:onClick="btn10" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="New ImageButton"
+            android:id="@+id/btn11"
+            android:layout_row="9"
+            android:layout_column="1"
+            android:onClick="btn11" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="New ImageButton"
+            android:id="@+id/btn12"
+            android:layout_row="9"
+            android:layout_column="2"
+            android:onClick="btn12" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="New ImageButton"
+            android:id="@+id/btn20"
+            android:layout_row="10"
+            android:layout_column="0"
+            android:onClick="btn20" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="New ImageButton"
+            android:id="@+id/btn21"
+            android:layout_row="10"
+            android:layout_column="1"
+            android:onClick="btn21" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="New ImageButton"
+            android:id="@+id/btn22"
+            android:layout_row="10"
+            android:layout_column="2"
+            android:onClick="btn22" />
+
+    </GridLayout>
+</RelativeLayout>
