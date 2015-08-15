@@ -15,6 +15,8 @@ public class MainActivity extends ActionBarActivity {
 
 
     public static final int TAMANIO = 3;
+    public  static final int CIRCLE = R.drawable.minion_1;
+    public static  final  int ESQUIS = R.drawable.minion_2;
 
     private Jugador jugador1;
     private Jugador jugador2;
@@ -70,159 +72,57 @@ public class MainActivity extends ActionBarActivity {
             }
         }
     }
-    public void btn00(View view){
-        ImageButton btn = (ImageButton) findViewById(R.id.btn00);
-        if(malla[0][0].getEstado()==Casilla.VACIO){
-            if (turno){
-                malla[0][0].setEstado(Casilla.EQUIS);
-                btn.setImageResource(R.drawable.square256);
+    public void  cambiarEstado(ImageButton btn, int fila, int columna) {
+        if (malla[fila][columna].getEstado() == Casilla.VACIO) {
+            if (turno) {
+                malla[fila][columna].setEstado(Casilla.EQUIS);
+                btn.setImageResource(ESQUIS);
                 turno = false;
-                verificarTurno(0,0,Casilla.EQUIS);
-            }else{
-                malla[0][0].setEstado(Casilla.CIRCULO);
-                btn.setImageResource(R.drawable.circles27);
+                verificarTurno(fila, columna, Casilla.EQUIS);
+            } else {
+                malla[fila][columna].setEstado(Casilla.CIRCULO);
+                btn.setImageResource(CIRCLE);
                 turno = true;
-                verificarTurno(0,0,Casilla.CIRCULO);
+                verificarTurno(fila, columna, Casilla.CIRCULO);
             }
             numeroTurnos++;
         }
-
+    }
+    public void btn00(View view){
+        ImageButton btn = (ImageButton) findViewById(R.id.btn00);
+        cambiarEstado(btn,0,0);
     }
     public void btn01(View view){
         ImageButton btn = (ImageButton) findViewById(R.id.btn01);
-        if(malla[0][1].getEstado()==Casilla.VACIO){
-            if (turno){
-                malla[0][1].setEstado(Casilla.EQUIS);
-                btn.setImageResource(R.drawable.square256);
-                turno = false;
-                verificarTurno(0,1,Casilla.EQUIS);
-            }else{
-                malla[0][1].setEstado(Casilla.CIRCULO);
-                btn.setImageResource(R.drawable.circles27);
-                turno = true;
-                verificarTurno(0,1,Casilla.CIRCULO);
-            }
-            numeroTurnos++;
-        }
+        cambiarEstado(btn, 0,1);
     }
     public void btn02(View view){
         ImageButton btn = (ImageButton) findViewById(R.id.btn02);
-        if(malla[0][2].getEstado()==Casilla.VACIO){
-            if (turno){
-                malla[0][2].setEstado(Casilla.EQUIS);
-                btn.setImageResource(R.drawable.square256);
-                turno = false;
-                verificarTurno(0,2,Casilla.EQUIS);
-            }else{
-                malla[0][2].setEstado(Casilla.CIRCULO);
-                btn.setImageResource(R.drawable.circles27);
-                turno = true;
-                verificarTurno(0,2,Casilla.CIRCULO);
-            }
-            numeroTurnos++;
-        }
+        cambiarEstado(btn,0,2);
     }
     public void btn10(View view){
         ImageButton btn = (ImageButton) findViewById(R.id.btn10);
-        if(malla[1][0].getEstado()==Casilla.VACIO){
-            if (turno){
-                malla[1][0].setEstado(Casilla.EQUIS);
-                btn.setImageResource(R.drawable.square256);
-                turno = false;
-                verificarTurno(1,0,Casilla.EQUIS);
-            }else{
-                malla[1][0].setEstado(Casilla.CIRCULO);
-                btn.setImageResource(R.drawable.circles27);
-                turno = true;
-                verificarTurno(1,0,Casilla.CIRCULO);
-            }
-            numeroTurnos++;
-        }
+        cambiarEstado(btn,1,0);
     }
     public void btn11(View view){
         ImageButton btn = (ImageButton) findViewById(R.id.btn11);
-        if(malla[1][1].getEstado()==Casilla.VACIO){
-            if (turno){
-                malla[1][1].setEstado(Casilla.EQUIS);
-                btn.setImageResource(R.drawable.square256);
-                turno = false;
-                verificarTurno(1,1,Casilla.EQUIS);
-            }else{
-                malla[1][1].setEstado(Casilla.CIRCULO);
-                btn.setImageResource(R.drawable.circles27);
-                turno = true;
-                verificarTurno(1,1,Casilla.CIRCULO);
-            }
-            numeroTurnos++;
-        }
+        cambiarEstado(btn,1,1);
     }
     public void btn12(View view){
         ImageButton btn = (ImageButton) findViewById(R.id.btn12);
-        if(malla[1][2].getEstado()==Casilla.VACIO){
-            if (turno){
-                malla[1][2].setEstado(Casilla.EQUIS);
-                btn.setImageResource(R.drawable.square256);
-                turno = false;
-                verificarTurno(1,2,Casilla.EQUIS);
-            }else{
-                malla[1][2].setEstado(Casilla.CIRCULO);
-                btn.setImageResource(R.drawable.circles27);
-                turno = true;
-                verificarTurno(1,2,Casilla.CIRCULO);
-            }
-            numeroTurnos++;
-        }
+        cambiarEstado(btn,1,2);
     }
     public void btn20(View view){
         ImageButton btn = (ImageButton) findViewById(R.id.btn20);
-        if(malla[2][0].getEstado()==Casilla.VACIO){
-            if (turno){
-                malla[2][0].setEstado(Casilla.EQUIS);
-                btn.setImageResource(R.drawable.square256);
-                turno = false;
-                verificarTurno(2,0,Casilla.EQUIS);
-            }else{
-                malla[2][0].setEstado(Casilla.CIRCULO);
-                btn.setImageResource(R.drawable.circles27);
-                turno = true;
-                verificarTurno(2,0,Casilla.CIRCULO);
-            }
-            numeroTurnos++;
-        }
+        cambiarEstado(btn,2,0);
     }
     public void btn21(View view){
         ImageButton btn = (ImageButton) findViewById(R.id.btn21);
-        if(malla[2][1].getEstado()==Casilla.VACIO){
-            if (turno){
-                malla[2][1].setEstado(Casilla.EQUIS);
-                btn.setImageResource(R.drawable.square256);
-                turno = false;
-                verificarTurno(2,1,Casilla.EQUIS);
-            }else{
-                malla[2][1].setEstado(Casilla.CIRCULO);
-                btn.setImageResource(R.drawable.circles27);
-                turno = true;
-                verificarTurno(2,1,Casilla.CIRCULO);
-            }
-            numeroTurnos++;
-        }
+       cambiarEstado(btn,2,1);
     }
     public void btn22(View view){
         ImageButton btn = (ImageButton) findViewById(R.id.btn22);
-        if(malla[2][2].getEstado()==Casilla.VACIO){
-            if (turno){
-                malla[2][2].setEstado(Casilla.EQUIS);
-                btn.setImageResource(R.drawable.square256);
-                turno = false;
-                verificarTurno(2,2,Casilla.EQUIS);
-            }else{
-                malla[2][2].setEstado(Casilla.CIRCULO);
-                btn.setImageResource(R.drawable.circles27);
-                turno = true;
-                verificarTurno(2,2,Casilla.CIRCULO);
-            }
-            numeroTurnos++;
-        }
+        cambiarEstado(btn,2,2);
     }
     public void verificarTurno(int fila, int columna,int estado){
         boolean vaGanando=true;
