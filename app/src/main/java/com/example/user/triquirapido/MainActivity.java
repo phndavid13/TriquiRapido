@@ -125,11 +125,9 @@ public class MainActivity extends ActionBarActivity {
         cambiarEstado(btn,2,2);
     }
     public void verificarTurno(int fila, int columna,int estado){
-        boolean vaGanando=true;
         boolean ganoPorFila=true;
         boolean ganoPorColumna=true;
         boolean ganoPorDiagonal=true;
-        //logica fila 0
         for(int i=0;i<TAMANIO;i++){
             if(malla[fila][i].getEstado()!=estado){
                 ganoPorFila=false;
@@ -139,10 +137,8 @@ public class MainActivity extends ActionBarActivity {
             }
         }
 
-        
-        if(ganoPorColumna || ganoPorFila){
+        if(ganoPorColumna || ganoPorFila || ganoPorDiagonal){
             txtGanador.setText("Ganador");
-        }else{
         }
     }
 }
