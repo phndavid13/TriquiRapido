@@ -73,19 +73,21 @@ public class MainActivity extends ActionBarActivity {
         }
     }
     public void  cambiarEstado(ImageButton btn, int fila, int columna) {
-        if (malla[fila][columna].getEstado() == Casilla.VACIO) {
-            if (turno) {
-                malla[fila][columna].setEstado(Casilla.EQUIS);
-                btn.setImageResource(ESQUIS);
-                turno = false;
-                verificarTurno(fila, columna, Casilla.EQUIS);
-            } else {
-                malla[fila][columna].setEstado(Casilla.CIRCULO);
-                btn.setImageResource(CIRCLE);
-                turno = true;
-                verificarTurno(fila, columna, Casilla.CIRCULO);
+        if(!termino) {
+            if (malla[fila][columna].getEstado() == Casilla.VACIO) {
+                numeroTurnos++;
+                if (turno) {
+                    malla[fila][columna].setEstado(Casilla.EQUIS);
+                    btn.setImageResource(ESQUIS);
+                    turno = false;
+                    verificarTurno(fila, columna, Casilla.EQUIS);
+                } else {
+                    malla[fila][columna].setEstado(Casilla.CIRCULO);
+                    btn.setImageResource(CIRCLE);
+                    turno = true;
+                    verificarTurno(fila, columna, Casilla.CIRCULO);
+                }
             }
-            numeroTurnos++;
         }
     }
     public void btn00(View view){
@@ -128,6 +130,8 @@ public class MainActivity extends ActionBarActivity {
         boolean ganoPorFila=true;
         boolean ganoPorColumna=true;
         boolean ganoPorDiagonal=true;
+        boolean ganoDiagonalPrincipal=true;
+        boolean ganoDiagonalSecundaria=true;
         for(int i=0;i<TAMANIO;i++){
             if(malla[fila][i].getEstado()!=estado){
                 ganoPorFila=false;
@@ -135,10 +139,23 @@ public class MainActivity extends ActionBarActivity {
             if(malla[i][columna].getEstado()!=estado){
                 ganoPorColumna=false;
             }
+            if(malla[i][i].getEstado()!=estado){
+                ganoDiagonalPrincipal=false;
+            }
+            if(malla[i][(TAMANIO-1)-i].getEstado()!=estado){
+                ganoDiagonalSecundaria=false;
+            }
         }
-
+        if(!ganoDiagonalPrincipal && !ganoDiagonalSecundaria){
+            ganoPorDiagonal=false;
+        }
         if(ganoPorColumna || ganoPorFila || ganoPorDiagonal){
             txtGanador.setText("Ganador");
+            termino = true;
+        }
+        if(numeroTurnos==9 && !termino){
+            txtGanador.setText("Empate");
+            termino=true;
         }
     }
 }
