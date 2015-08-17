@@ -5,5 +5,11 @@
         <!-- Customize your theme here. -->
 
     </style>
+    <style name="playerActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+    <style name="MainActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
 
 </resources>

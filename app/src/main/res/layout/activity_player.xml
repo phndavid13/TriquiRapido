@@ -4,22 +4,53 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="#FFDD04"
-    tools:context="com.example.user.triquirapido.PlayerActivity">
+    android:background="#E3C90F"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView5"
+        android:src="@drawable/despi"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:layout_width="307dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Minions"
-        android:textColor="#FFf"
-        android:typeface="monospace"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Tic Tac Toe"
         android:id="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:textColor="#CD4A0C"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/imageView5"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:gravity="center"
-        android:textSize="25dp"
-        android:textIsSelectable="true" />
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp" />
 
+    <ImageButton
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnm"
+        android:src="@drawable/vs2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:onClick="btnManual" />
+
+    <ImageButton
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btna"
+        android:src="@drawable/vs1"
+        android:layout_marginBottom="77dp"
+        android:layout_above="@+id/btnm"
+        android:layout_alignLeft="@+id/btnm"
+        android:layout_alignStart="@+id/btnm"
+        android:onClick="btnAndroid" />
 </RelativeLayout>

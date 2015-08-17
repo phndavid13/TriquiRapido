@@ -1,17 +1,27 @@
 package com.example.user.triquirapido;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 
 public class PlayerActivity extends ActionBarActivity {
+
+    public final static String ANDROID = "com.example.user.triquirapido.MESSAGE";
+
+    private ImageButton btnPlayerAndroid;
+    private ImageButton btnPlayerManual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
+        btnPlayerAndroid = (ImageButton) findViewById(R.id.btna);
+        btnPlayerManual = (ImageButton) findViewById(R.id.btnm);
     }
 
 
@@ -35,5 +45,15 @@ public class PlayerActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void btnAndroid(View view){
+        Intent intent = new Intent(this,MainActivity.class);
+        intent.putExtra(ANDROID,true);
+        startActivity(intent);
+    }
+    public void btnManual(View view){
+        Intent intent = new Intent(this,MainActivity.class);
+        intent.putExtra(ANDROID,false);
+        startActivity(intent);
     }
 }
