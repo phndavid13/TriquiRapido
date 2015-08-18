@@ -7,19 +7,6 @@
     android:background="#E3C90F"
     >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="TIC TAC TOE"
-        android:id="@+id/textView3"
-        android:textColor="#40657C"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:layout_marginTop="39dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <ImageButton
         android:background="@null"
         android:layout_width="wrap_content"
@@ -49,10 +36,31 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="PLEASE SELECT ONE OPTION"
         android:id="@+id/textView5"
-        android:textColor="#40657C"
+        android:textColor="#EC4E27"
         android:textStyle="bold"
         android:textSize="15dp"
         android:layout_marginBottom="39dp"
         android:layout_above="@+id/btna"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/despi" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tic Tac Toe"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignRight="@+id/imageButton"
+        android:layout_alignEnd="@+id/imageButton"
+        android:textColor="#EC4E27"
+        android:textStyle="bold" />
 </RelativeLayout>

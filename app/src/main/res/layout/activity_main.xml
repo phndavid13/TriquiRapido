@@ -6,14 +6,6 @@
     android:background="#E3C90F"
     android:id="@+id/theRelative">
 
-    <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:id="@+id/linearLayout"
-        android:layout_alignParentBottom="true">
-
-    </LinearLayout>
-
     <RelativeLayout
     android:layout_width="328dp"
     android:layout_height="550dp"
@@ -147,7 +139,7 @@
                 android:id="@+id/textView"
                 android:layout_gravity="center_vertical"
                 android:textSize="14dp"
-                android:textColor="#40657C"
+                android:textColor="#EC4E27"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/imageView2"
                 android:layout_toEndOf="@+id/imageView2"
@@ -170,7 +162,7 @@
                 android:text=": Kevin"
                 android:typeface="monospace"
                 android:id="@+id/textView2"
-                android:textColor="#40657C"
+                android:textColor="#EC4E27"
                 android:textSize="14dp"
                 android:layout_alignTop="@+id/textView"
                 android:layout_toRightOf="@+id/imageView3"
@@ -186,12 +178,12 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Tic Tac Toe"
             android:id="@+id/textView4"
-            android:textColor="#40657C"
+            android:textColor="#EC4E27"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:layout_above="@+id/imageView"
-            android:layout_toRightOf="@+id/btn21"
-            android:layout_toEndOf="@+id/btn21" />
+            android:layout_below="@+id/imageView5"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -201,6 +193,15 @@
             android:layout_above="@+id/imageView"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:src="@drawable/despi"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
 
