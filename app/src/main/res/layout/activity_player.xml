@@ -7,29 +7,18 @@
     android:background="#E3C90F"
     >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView5"
-        android:src="@drawable/despi"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Tic Tac Toe"
+        android:text="TIC TAC TOE"
         android:id="@+id/textView3"
-        android:textColor="#CD4A0C"
-        android:textSize="20dp"
+        android:textColor="#40657C"
+        android:textSize="30dp"
         android:textStyle="bold"
-        android:layout_below="@+id/imageView5"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:background="@null"
@@ -37,10 +26,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnm"
         android:src="@drawable/vs2"
+        android:layout_marginBottom="54dp"
+        android:onClick="btnManual"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp"
-        android:onClick="btnManual" />
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:background="@null"
@@ -53,4 +42,17 @@
         android:layout_alignLeft="@+id/btnm"
         android:layout_alignStart="@+id/btnm"
         android:onClick="btnAndroid" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="PLEASE SELECT ONE OPTION"
+        android:id="@+id/textView5"
+        android:textColor="#40657C"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_marginBottom="39dp"
+        android:layout_above="@+id/btna"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
